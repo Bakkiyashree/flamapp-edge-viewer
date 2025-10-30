@@ -1,1 +1,1 @@
-This project is used for detection and image processing .
+This project is used for edge detection and image processing .
