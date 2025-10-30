@@ -1,0 +1,25 @@
+**
+ * main.ts
+ * Web version of edge viewer.
+ * Simulates Canny Edge Visualization using Canvas API.
+ */
+
+const canvas = document.getElementById("edgeCanvas") as HTMLCanvasElement;
+const ctx = canvas.getContext("2d")!;
+
+const img = new Image();
+img.src = "sample_frame.png";
+
+img.onload = () => {
+  ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+  const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+  const data = imageData.data;
+
+  // Simulated grayscale edge effect
+  for (let i = 0; i < data.length; i += 4) {
+    const avg = (data[i] + data[i + 1] + data[i + 2]) / 3;
+    data[i] = data[i + 1] = data[i + 2] = avg > 128 ? 255 : 0;
+  }
+
+  ctx.putImageData(imageData, 0, 0);
+};

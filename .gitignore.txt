@@ -1,0 +1,17 @@
+*.class
+*.log
+*.tmp
+*.bak
+*.iml
+.gradle/
+.idea/
+build/
+out/
+node_modules/
+
+Save and close it.
+
+---
+
+✅ Once both files (`README.md` and `.gitignore`) are ready,
+reply **“done”**, and I’ll walk you through your **final upload to GitHub** (you’re almost done 🎉).

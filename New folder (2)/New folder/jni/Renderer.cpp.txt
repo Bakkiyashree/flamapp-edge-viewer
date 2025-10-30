@@ -1,0 +1,14 @@
+#include <GLES2/gl2.h>
+#include <GLES2/gl2ext.h>
+
+/**
+ * Renderer.cpp
+ * OpenGL ES based frame renderer stub.
+ * Simulates a basic shader pipeline used for visualizing edge detection output.
+ */
+
+void drawFrame(float* pixels, int width, int height) {
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+    glClear(GL_COLOR_BUFFER_BIT);
+    glDrawArrays(GL_TRIANGLES, 0, 3);
+}
